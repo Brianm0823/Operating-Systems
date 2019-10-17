@@ -1,0 +1,12 @@
+﻿input_var a,b,c,d;
+internal_var p0,p1,p2,p3;
+	a -> p0;
+	- b -> p0;
+	c -> p1;
+	+ d -> p1;
+	a -> p2;
+	- d -> p2;
+	p0 -> p3;
+	* p1 -> p3;
+	+ p2 -> p3;
+write(a,b,c,d,p0,p1,p2,p3).

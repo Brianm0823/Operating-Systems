@@ -1,0 +1,22 @@
+Brian Mendoza
+COSC 3360
+Programming Assignment 1
+
+
+Compile using the following: 
+
+g++ PA1.cpp lex.yy.c -o PA1
+
+Run using the following:
+
+./PA1 inputCommands.txt input.txt
+
+
+I used lex to parse the input files so lex.l, lex.yy.c, and scanner.h are all included. I used the following tutorial as a base and edited it extensively to work with my code. 
+"Part 01: Tutorial on lex/yacc" - https://www.youtube.com/watch?v=54bo1qaHAfk&
+
+I have written comments throughout my program explaining what my code does. 
+
+
+
+

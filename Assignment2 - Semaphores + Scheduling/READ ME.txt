@@ -1,0 +1,38 @@
+Brian Mendoza
+COSC 3360
+Programming Assignment 2
+
+
+Compile using the following: 
+
+g++ PA2.cpp lex.yy.c -o PA2
+
+Run using the following:
+
+./PA2 input.txt
+
+
+
+I used lex to parse the input files so lex.l, lex.yy.c, and scanner.h are all included. I used the following tutorial as a base and edited it extensively to work with my code. 
+"Part 01: Tutorial on lex/yacc" - https://www.youtube.com/watch?v=54bo1qaHAfk&
+
+User is given a choice after running the program to pick which scheduling to use:
+0 = no scheduling
+1 = EDF
+2 = LLF
+
+No scheduling: program runs each process (customer) concurrently so each process runs each of its transactions one after the other. 
+
+EDF: I put all the deadlines in increasing order and then read each process's next transaction, if the deadline matches the earliest deadline, that process executes the transaction. 
+
+LLF: Each process calculates its laxity by subtracting the deadline of its next task with the current runtime of the process, and then subtracts the total computation time left for that process.
+Laxity = (deadline of process - current process runtime) - remaining computation time
+When the process has the least laxity, it executes its next transaction
+
+
+
+
+
+
+
+
